@@ -1,0 +1,88 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 217 71% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 216 71% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 216 71% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 199 89% 60%;
+    --primary-foreground: 217 76% 15%;
+
+    --secondary: 218 30% 25%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 218 30% 25%;
+    --muted-foreground: 215 20% 75%;
+
+    --accent: 330 86% 64%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 218 30% 20%;
+    --input: 218 30% 25%;
+    --ring: 199 89% 60%;
+
+    --radius: 0.5rem;
+    
+    /* Sidebar Variables */
+    --sidebar-background: 216 71% 10%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-border: 218 30% 20%;
+    --sidebar-primary: 199 89% 60%;
+    --sidebar-primary-foreground: 217 76% 15%;
+    --sidebar-accent: 330 86% 64%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-ring: 199 89% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sora bg-background text-foreground antialiased overflow-x-hidden;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer components {
+  .neo-card {
+    @apply bg-gradient-to-br from-vr-midnight to-vr-dark border border-vr-slate/20 shadow-lg;
+  }
+  
+  .glass-panel {
+    @apply backdrop-blur-md bg-vr-slate/10 border border-white/10 shadow-md;
+  }
+  
+  .detection-box {
+    @apply absolute border-2 rounded-md animate-detection-overlay;
+  }
+}
+
+@layer utilities {
+  .cyber-gradient {
+    @apply bg-gradient-to-br from-vr-dark via-vr-midnight to-black;
+  }
+  
+  .accent-gradient {
+    @apply bg-gradient-to-r from-vr-accent via-vr-highlight to-vr-orange bg-clip-text text-transparent;
+  }
+}
